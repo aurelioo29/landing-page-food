@@ -1,0 +1,26 @@
+/* best seller */
+.recipeSection {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animate {
+  transform: translateX(-100%); /* atau +100% untuk arah kanan */
+}
+
+.recipeCard {
+  transition: transform 0.3s ease; /* Transisi yang halus */
+}
+
+.recipeCard:hover {
+  transform: scale(1.15); /* Zoom in */
+}
+
+/* menu */
+.menuCard {
+  transition: transform 0.3s ease;
+}
+
+.menuCard:hover {
+  transform: scale(1.07);
+  border: 3px solid #c4f1f9;
+}
