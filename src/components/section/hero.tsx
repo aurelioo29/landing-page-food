@@ -21,7 +21,7 @@ const RecipeSection = () => {
   const [animationDirection, setAnimationDirection] = useState("");
 
   const handleNextRecipe = () => {
-    setAnimationDirection(styles.animateNext); 
+    setAnimationDirection(styles.animateNext);
     setIsAnimating(true);
     setTimeout(() => {
       nextRecipe();
@@ -38,8 +38,8 @@ const RecipeSection = () => {
     }, 300);
   };
 
-  const flexDirection = useBreakpointValue({ base: "column", md: "row" });
-  const textAlign = useBreakpointValue({ base: "center", md: "left" });
+  const flexDirection = useBreakpointValue({ base: "column", md: "row" }) as "column" | "row"; // Menetapkan tipe
+  const textAlign: "center" | "left" = useBreakpointValue({ base: "center", md: "left" }) || "left";
   const imgMaxHeight = useBreakpointValue({ base: "200px", md: "350px" });
 
   return (
@@ -52,7 +52,7 @@ const RecipeSection = () => {
       boxShadow="lg"
       maxW="1300px"
       mx="auto"
-      direction={flexDirection} // Mengubah arah flex sesuai ukuran layar
+      direction={flexDirection}
       align="center"
       justify="space-between"
       position="relative"

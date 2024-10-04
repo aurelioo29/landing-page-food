@@ -11,7 +11,7 @@ const NavbarSection = () => {
   ];
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef();
+  const btnRef = useRef<HTMLButtonElement>(null); // Menentukan tipe ref
 
   const isMobile = useBreakpointValue({ base: true, md: false });
 
