@@ -73,7 +73,7 @@ export default function MenuSection() {
         <TabPanels>
           {/* Peri-peri Chicken */}
           <TabPanel>
-            <Flex justify="space-evenly" wrap="wrap">
+            <Flex justify="center" wrap="wrap">
               {menuItems.periPeriChicken.map((item, index) => (
                 <Box
                   key={index}
@@ -84,6 +84,10 @@ export default function MenuSection() {
                   mb={4}
                   textAlign="left"
                   className={styles.menuCard}
+                  mx={2} 
+                  display="flex" 
+                  flexDirection="column"
+                  alignItems="center"
                 >
                   <Image
                     src={item.image}
@@ -92,7 +96,7 @@ export default function MenuSection() {
                     width={382}
                     objectFit="cover"
                   />
-                  <Box p={6}>
+                  <Box p={6} textAlign="center"> 
                     <Text fontWeight="bold" fontSize="2xl" mb={2}>
                       {item.price}
                     </Text>
@@ -119,7 +123,7 @@ export default function MenuSection() {
 
           {/* Salad & Rice Bowls */}
           <TabPanel>
-            <Flex justify="space-evenly" wrap="wrap">
+            <Flex justify="center" wrap="wrap">
               {menuItems.saladsAndRiceBowls.map((item, index) => (
                 <Box
                   key={index}
@@ -130,6 +134,10 @@ export default function MenuSection() {
                   mb={4}
                   textAlign="left"
                   className={styles.menuCard}
+                  mx={2}
+                  display="flex"
+                  flexDirection="column" 
+                  alignItems="center" 
                 >
                   <Image
                     src={item.image}
@@ -138,7 +146,7 @@ export default function MenuSection() {
                     width={382}
                     objectFit="cover"
                   />
-                  <Box p={6}>
+                  <Box p={6} textAlign="center"> 
                     <Text fontWeight="bold" fontSize="2xl" mb={2}>
                       {item.price}
                     </Text>
@@ -165,7 +173,7 @@ export default function MenuSection() {
 
           {/* Burgers Pitas Wraps */}
           <TabPanel>
-            <Flex justify="space-evenly" wrap="wrap">
+            <Flex justify="center" wrap="wrap">
               {menuItems.burgersPitasWraps.map((item, index) => (
                 <Box
                   key={index}
@@ -176,6 +184,10 @@ export default function MenuSection() {
                   mb={4}
                   textAlign="left"
                   className={styles.menuCard}
+                  mx={2}
+                  display="flex" 
+                  flexDirection="column" 
+                  alignItems="center" 
                 >
                   <Image
                     src={item.image}
@@ -184,7 +196,7 @@ export default function MenuSection() {
                     width={382}
                     objectFit="cover"
                   />
-                  <Box p={6}>
+                  <Box p={6} textAlign="center">
                     <Text fontWeight="bold" fontSize="2xl" mb={2}>
                       {item.price}
                     </Text>
@@ -211,7 +223,7 @@ export default function MenuSection() {
 
           {/* Veggie Corner */}
           <TabPanel>
-            <Flex justify="space-evenly" wrap="wrap">
+            <Flex justify="center" wrap="wrap">
               {menuItems.veggieCorner.map((item, index) => (
                 <Box
                   key={index}
@@ -222,6 +234,10 @@ export default function MenuSection() {
                   mb={4}
                   textAlign="left"
                   className={styles.menuCard}
+                  mx={2}
+                  display="flex" 
+                  flexDirection="column"
+                  alignItems="center"
                 >
                   <Image
                     src={item.image}
@@ -230,7 +246,7 @@ export default function MenuSection() {
                     width={382}
                     objectFit="cover"
                   />
-                  <Box p={6}>
+                  <Box p={6} textAlign="center"> {/* Menambahkan textAlign di sini */}
                     <Text fontWeight="bold" fontSize="2xl" mb={2}>
                       {item.price}
                     </Text>

@@ -3,8 +3,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.animate {
-  transform: translateX(-100%); /* atau +100% untuk arah kanan */
+.animateNext {
+  transform: translateX(-100%);
+}
+
+.animatePrev {
+  transform: translateX(100%);
 }
 
 .recipeCard {
