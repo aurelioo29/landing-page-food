@@ -7,6 +7,8 @@ import { Box } from "@chakra-ui/react";
 import RecipeSection from "@/components/section/hero";
 import LocationSection from "@/components/section/location";
 import MenuSection from "@/components/section/menu";
+import AboutSection from "@/components/section/about";
+import FranchiseSection from "@/components/section/franchise";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +26,10 @@ export default function Home() {
       </Head>
       <Box as="main">
         <RecipeSection />
+        <AboutSection />
         <LocationSection />
         <MenuSection />
+        <FranchiseSection />
       </Box>
     </>
   );
