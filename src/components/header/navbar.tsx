@@ -1,6 +1,29 @@
-import { Box, Flex, HStack, Image, Link, IconButton, Stack, useBreakpointValue, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, Button, useDisclosure } from "@chakra-ui/react";
-import { FaLinkedin, FaInstagram, FaGithub, FaBars } from "react-icons/fa";
-import { useRef } from "react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Image,
+  Link,
+  IconButton,
+  Stack,
+  useBreakpointValue,
+  Drawer,
+  DrawerBody,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Button,
+  useDisclosure,
+} from "@chakra-ui/react";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaGithub,
+  FaBars,
+  FaArrowUp,
+} from "react-icons/fa";
+import { useRef, useState, useEffect } from "react";
 
 const NavbarSection = () => {
   const navItems = [
@@ -14,6 +37,27 @@ const NavbarSection = () => {
   const btnRef = useRef<HTMLButtonElement>(null); // Menentukan tipe ref
 
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Box
@@ -159,6 +203,23 @@ const NavbarSection = () => {
           </DrawerContent>
         </Drawer>
       </Flex>
+
+      {/* Tombol Scroll to Top */}
+      {showScrollToTop && (
+        <Button
+          position="fixed"
+          bottom="20px"
+          right="10px"
+          colorScheme="teal"
+          onClick={scrollToTop}
+          borderRadius="full"
+          size="md"
+          aria-label="Scroll to top"
+          boxShadow="lg"
+        >
+          <FaArrowUp />
+        </Button>
+      )}
     </Box>
   );
 };
