@@ -35,7 +35,7 @@ const NavbarSection = () => {
         justifyContent="space-between"
       >
         {/* Logo */}
-        <Link href="/" display="flex" alignItems="center">
+        <Link href="#" display="flex" alignItems="center">
           <Image src="/assets/logo.jpg" alt="logo" width={70} />
         </Link>
 

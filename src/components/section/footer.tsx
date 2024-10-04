@@ -22,7 +22,7 @@ const FooterSection = () => {
           spacing={8}
         >
           <Box textAlign={{ base: "center", md: "left" }}>
-            <Link href="/">
+            <Link href="#">
               <Image
                 src="/assets/logo.jpg"
                 alt="logo"
