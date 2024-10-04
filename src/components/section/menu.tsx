@@ -17,7 +17,13 @@ import styles from "../../styles/animation.module.css";
 export default function MenuSection() {
   return (
     <Box py={8} textAlign="center" id="menu">
-      <Heading as="h2" size="xl" mb={4}>
+      <Heading
+        as="h2"
+        size="xl"
+        mb={4}
+        bgGradient="linear(to-r, teal.400, green.400)"
+        backgroundClip="text"
+      >
         Featured Menu
       </Heading>
       <Tabs variant="unstyled" align="center">
